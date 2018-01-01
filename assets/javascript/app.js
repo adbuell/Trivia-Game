@@ -24,9 +24,21 @@ var questions = [{
 var currentQuestion = 0;
 var correctAnswers = 0;
 var quizOver = false;
+var timeLeft = 30;
 
-$(document).ready(function () {
+var elem = document.getElementById("game-timer");
 
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+  if (timeLeft == 0) {
+    clearTimeout(timerId);
+    doSomething();
+  } else {
+    elem.innerHTML = timeLeft + ' seconds remaining';
+    timeLeft--;
+  }
+}
 
     displayCurrentQuestion();
     $(this).find(".quizMessage").hide();

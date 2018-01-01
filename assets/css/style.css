@@ -22,11 +22,12 @@ p {
 }
 
  .quizContainer {
-    background-color: lightgoldenrodyellow;
+    background-color: #4d3474;
     border-radius: 6px;
     width: 75%;
     margin: auto;
     padding-top: 5px;
+    padding-bottom: 5px;
 
     position: relative;
 }
@@ -65,7 +66,7 @@ p {
 }
 .choiceList {
     font-family: Courier, serif;
-    color: Green;
+    color: #9bcf60;
 }
 .result {
     width: 30%;
@@ -75,4 +76,22 @@ p {
     margin: auto;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-image: url("assets/images/musicnote.png");
+    background-color: #cccccc;
+}
+.timer {
+  color: #9bcf60;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6em;
+  padding: 6px;
+  margin: 0px auto 10px;
+  border: 1px solid #c6c6c2;
+  border-radius: 5px;
+  width: 80px;
+  background-color: linen;
+  padding-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
