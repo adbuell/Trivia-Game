@@ -24,19 +24,17 @@ var questions = [{
 var currentQuestion = 0;
 var correctAnswers = 0;
 var quizOver = false;
-var timeLeft = 30;
+var gameTimer;
+var timeAllotted = 30;
 
-var elem = document.getElementById("game-timer");
+$(document).ready(function () {
 
-var timerId = setInterval(countdown, 1000);
-
-function countdown() {
-  if (timeLeft == 0) {
-    clearTimeout(timerId);
-    doSomething();
-  } else {
-    elem.innerHTML = timeLeft + ' seconds remaining';
-    timeLeft--;
+  function updateClock() {
+  timeAllotted--;
+  $("#game-timer").html(timeAllotted);
+  if (timeAllotted === 0) {
+    clearInterval(gameTimer);
+    endGame();
   }
 }
 
