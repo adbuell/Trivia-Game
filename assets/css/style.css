@@ -77,8 +77,9 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 body {
-    background-image: url("assets/images/musicnote.png");
-    background-color: #cccccc;
+    background-image: url("../images/musicnote.png");
+  
+
 }
 .timer {
   color: #9bcf60;
