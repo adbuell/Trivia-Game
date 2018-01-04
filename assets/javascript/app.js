@@ -1,4 +1,16 @@
 
+var seconds = 30;
+var myTimer = setInterval(function() {
+seconds--
+document.getElementById("timer").innerHTML=seconds;
+if (seconds==0) {
+  alert("times up!")
+clearInterval(myTimer);
+}
+
+}, 1000)
+
+
 var questions = [{
     question: "Eddie Van Halen, Eric Clapton and Jimmy Page all play what insturment?",
     choices: ["Drums", "Guitar", "Piano", "Bass"],
@@ -25,24 +37,11 @@ var currentQuestion = 0;
 var correctAnswers = 0;
 var quizOver = false;
 
-var number = 60;
-var intervalId;
-$("#game-timer").on("click", run);
-function run() {
-  intervalId = setInterval(decrement, 1000);
-}
-function decrement() {
-  number--;
-  $("game-timer").html("<h2>" + number + "</h2>");
-  if (number === 0) {
 
-    results.innerHTML = "<p>you scored <span>" +score+ "</span> out of <span>" +total+"</span></p>";
-    alert("you scored " +score+ " out of " +total);
-    clearInterval(intervalId);
 
-  }
-}
-run();
+
+
+
 
 
 $(document).ready(function () {
