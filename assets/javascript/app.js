@@ -74,6 +74,7 @@ $(document).ready(function () {
 
                     $(document).find(".nextButton").text("Play Again?");
                     quizOver = true;
+
                 }
             }
         } else {
@@ -113,6 +114,7 @@ function displayCurrentQuestion() {
 function resetQuiz() {
     currentQuestion = 0;
     correctAnswers = 0;
+    seconds = 30; 
     hideScore();
 }
 
